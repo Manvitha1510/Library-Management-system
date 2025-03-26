@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "dotnet",
+			"task": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "dotnet: build"
+		},
+		{
+			"type": "dotnet",
+			"task": "watch ConsoleApp9",
+			"file": "/Users/pranavigolamari/Downloads/git/Library-Management-system/ConsoleApp9.csproj",
+			"problemMatcher": [],
+			"label": "dotnet: watch ConsoleApp9",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

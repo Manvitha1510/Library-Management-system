@@ -23,8 +23,19 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine();
-            
-        }
+            // Creating Staff Members
+        Staff staff1 = new Staff("Shivani", "shivani@usf.edu", "ST001", "Librarian", "Library Services");
+        Staff staff2 = new Staff("manvitha", "manvitha@usf.edu", "ST002", "Assistant Librarian", "Library Services");
+
+        // List of Staff Members
+        //List<Staff> staffMembers = new List<Staff> { staff1, staff2 };
+
+        // Displaying Staff Information
+        //Console.WriteLine("\nStaff in Library:");
+        //foreach (var staff in staffMembers)
+        //{
+         //   Console.WriteLine($"Name: {staff.Name}, ID: {staff.ID}, Position: {staff.Position}, Department: {staff.Department}");
+        //}
     }
+}
 }

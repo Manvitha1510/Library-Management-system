@@ -24,6 +24,8 @@ namespace ConsoleApp9
     {
         public static void Main(string[] args)
         {
+            Library lib = new Library();
+            Console.WriteLine();
             //  Creating Books
             Book book1 = new Book("The Art of Data Strategy", "Liam Reynolds", "ISBN111", 4);
             Book book2 = new Book("Business Insights with AI", "Olivia Carter", "ISBN222", 3);
@@ -37,7 +39,6 @@ namespace ConsoleApp9
             {
                 Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
             }
-
             
         }
     }

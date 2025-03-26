@@ -1,4 +1,5 @@
-﻿namespace ConsoleApp9
+﻿using System;
+namespace ConsoleApp9
 {
     public class Person
     {
@@ -23,6 +24,7 @@
     {
         public static void Main(string[] args)
         {
+            Library lib = new Library();
             Console.WriteLine();
             
         }

@@ -26,7 +26,21 @@ namespace ConsoleApp9
         {
             Library lib = new Library();
             Console.WriteLine();
+            //  Creating Books
+            Book book1 = new Book("The Art of Data Strategy", "Liam Reynolds", "ISBN111", 4);
+            Book book2 = new Book("Business Insights with AI", "Olivia Carter", "ISBN222", 3);
+            Book book3 = new Book("Analytics in Action", "Nathan Brooks", "ISBN333", 6);
+
+            List<Book> books = new List<Book> { book1, book2, book3 };
+
+            //  Display Books in Library
+            Console.WriteLine("\n Books in Library:");
+            foreach (var book in books)
+            {
+                Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
+            }
             
         }
     }
+
 }

@@ -1,4 +1,6 @@
-﻿public class Staff : Person
+﻿using ConsoleApp9;
+
+public class Staff : Person
 {
     public string Position;
     public string Department;

@@ -24,40 +24,32 @@ namespace ConsoleApp9
     {
         public static void Main(string[] args)
         {
+            Library library = new Library();
 
-            // Creating Staff Members
-        Staff staff1 = new Staff("Shivani", "shivani@usf.edu", "ST001", "Librarian", "Library Services");
-        Staff staff2 = new Staff("manvitha", "manvitha@usf.edu", "ST002", "Assistant Librarian", "Library Services");
+            // Adding books
+            library.Books.Add(new Book("The Art of Data Strategy", "Liam Reynolds", "ISBN111", 4));
+            library.Books.Add(new Book("Business Insights with AI", "Olivia Carter", "ISBN222", 3));
+            library.Books.Add(new Book("Analytics in Action", "Nathan Brooks", "ISBN333", 6));
 
-        // List of Staff Members
-        //List<Staff> staffMembers = new List<Staff> { staff1, staff2 };
+            // Adding patrons
+            library.Person.Add(new Student("Akhil", "akhil@usf.edu", "S001", "Business Analytics", 2026));
+            library.Person.Add(new Student("Sandeep", "sandeep@usf.edu", "S002", "Information Systems", 2025));
+            library.Person.Add(new Staff("Grandon Gill", "grandon@usf.edu", "ST001", "Librarian", "Library Services"));
 
-        // Displaying Staff Information
-        //Console.WriteLine("\nStaff in Library:");
-        //foreach (var staff in staffMembers)
-        //{
-         //   Console.WriteLine($"Name: {staff.Name}, ID: {staff.ID}, Position: {staff.Position}, Department: {staff.Department}");
-        //}
+            library.DisplayBooks();
+            library.DisplayPatrons();
 
-            Library lib = new Library();
+            Console.WriteLine("Borrowing Books...");
+            library.Books[1].BorrowBook("Sandeep", library.Books[1].Title);
+            library.Books[2].BorrowBook("Akhil", library.Books[2].Title);
+
             Console.WriteLine();
-            //  Creating Books
-            Book book1 = new Book("The Art of Data Strategy", "Liam Reynolds", "ISBN111", 4);
-            Book book2 = new Book("Business Insights with AI", "Olivia Carter", "ISBN222", 3);
-            Book book3 = new Book("Analytics in Action", "Nathan Brooks", "ISBN333", 6);
+            Console.WriteLine("Books after borrowing:");
+            library.DisplayBooks();
 
-            List<Book> books = new List<Book> { book1, book2, book3 };
-
-            //  Display Books in Library
-            Console.WriteLine("\n Books in Library:");
-            foreach (var book in books)
-            {
-                Console.WriteLine($"Title: {book.Title}, Author: {book.Author}, Available Copies: {book.AvailableCopies}");
-            }
-            
         }
 
     }
 
 }
-}
+
